@@ -17,12 +17,19 @@ public class calculator_servlet extends HttpServlet {
 
         double n2 = Double.parseDouble(request.getParameter("txtN2"));
         double result =0;
-        String opr=request.getParameter("opr");
-        if(opr.equals("+")) result=n1+n2;
-        if(opr.equals("-")) result=n1-n2;
-        if(opr.equals("*")) result=n1*n2;
-        if(opr.equals("/")) result=n1/n2;
-
+        String opr=request.getParameter("operator");
+        if(opr.equals("+")){
+            result=n1+n2;
+        }
+        if(opr.equals("-")) {
+            result=n1-n2;
+        }
+        if(opr.equals("*")){
+            result=n1*n2;
+        }
+        if(opr.equals("/")) {
+            result=n1/n2;
+        }
         out.println("<h1> Result = "+result);
         out.println("</body></html>");
     }
