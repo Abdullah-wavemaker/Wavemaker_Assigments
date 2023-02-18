@@ -9,13 +9,12 @@
 Enter First Number
 <input type="text" name="txtN1" ><br> Enter Second Number
 <input type="text" name="txtN2" ><br><br>
-<input type="submit" name="opr" value="+">
-<input type="submit" name="opr" value="*">
-<input type="submit" name="opr" value="/">
-<input type="submit" name="opr" value="-">
+<input type="submit" name="operator" value="+">
+<input type="submit" name="operator" value="*">
+<input type="submit" name="operator" value="/">
+<input type="submit" name="operator" value="-">
 <br>
 <br> <input type="reset" value="clear">
 </form>
-
 </body>
 </html>
