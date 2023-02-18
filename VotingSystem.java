@@ -7,7 +7,7 @@ class votes{
     public int getvoter_id() {
         return voter_id;
     }
-    public votes( int voter_id) {
+    public votes(int voter_id) {
         this.voter_id = voter_id;
     }
     public votes(String voter_name){
@@ -25,6 +25,9 @@ class votes{
         return voter_name;
     }
 
+    public void printdetails(){
+        System.out.println("user has voted with voter id "+voter_id);
+    }
     @Override
     public String toString() {
         return super.toString();
@@ -42,6 +45,7 @@ class nominee{
         this.nominee_id = nominee_id;
     }
     public nominee(String nominee_name){
+
         this.nominee_name = nominee_name;
     }
     public void setNominee_id(int nominee_id) {
@@ -55,13 +59,18 @@ class nominee{
     public String getNominee_name() {
         return nominee_name;
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
 public class digital_voting {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         HashMap<nominee,nominee> NomineeDetails = new HashMap<nominee, nominee>();
         HashMap<votes,Integer> VoterDetails = new HashMap<votes, Integer>();
-        HashMap<Integer,String> UserDetails = new HashMap<Integer, String>();
+        HashMap<votes,votes> UserDetails = new HashMap<votes,votes>();
         NomineeDetails.put(new nominee(1),new nominee("TRS"));
         NomineeDetails.put(new nominee(2),new nominee("BJP"));
         NomineeDetails.put(new nominee(3),new nominee("CONGRESS"));
@@ -86,7 +95,7 @@ public class digital_voting {
             }
             else{
                 VoterDetails.put(new votes(VoterId), NomineeId);
-                UserDetails.put(VoterId,VoterName);
+                UserDetails.put(new votes(VoterId),new votes(VoterName));
             }
             voters--;
         }
@@ -96,28 +105,28 @@ public class digital_voting {
         System.out.println("Displaying TRS party voters: ");
         for (votes key : VoterDetails.keySet()) {
             if (VoterDetails.get(key).equals(1)) {
-                System.out.println(UserDetails.get(key)+" has voted with voter id "+key);
+                key.printdetails();
                 TrsVotes++;
             }
         }
         System.out.println("Displaying BJP party voters: ");
         for (votes key : VoterDetails.keySet()) {
             if (VoterDetails.get(key).equals(2)) {
-                System.out.println(UserDetails.get(key)+" has voted with voter id "+key);
+                key.printdetails();
                 BjpVotes++;
             }
         }
         System.out.println("Displaying Congress party voters: ");
         for (votes key : VoterDetails.keySet()) {
             if (VoterDetails.get(key).equals(3)) {
-                System.out.println(UserDetails.get(key)+" has voted with voter id "+key);
+                key.printdetails();
                 CongressVotes++;
             }
         }
         System.out.println("Displaying CPI party voters: ");
         for (votes key : VoterDetails.keySet()) {
             if (VoterDetails.get(key).equals(4)) {
-                System.out.println(UserDetails.get(key)+" has voted with voter id "+key);
+                key.printdetails();
                 CpiVotes++;
             }
         }
