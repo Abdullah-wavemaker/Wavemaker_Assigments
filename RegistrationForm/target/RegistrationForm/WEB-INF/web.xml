@@ -1,0 +1,38 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+    <filter-name>Filter1</filter-name>
+    <filter-class>com.servlet.filter.RegistrationFilter</filter-class>
+    <init-param>
+      <param-name>username</param-name>
+      <param-value>pramati</param-value>
+    </init-param>
+    <init-param>
+      <param-name>practice</param-name>
+      <param-value>no</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>Filter1</filter-name>
+    <url-pattern>/RegServ</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>registration</servlet-name>
+    <servlet-class>com.servlet.filter.RegistrationForm</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>display</servlet-name>
+    <servlet-class>com.servlet.filter.DisplayDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>registration</servlet-name>
+    <url-pattern>/RegServ</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>display</servlet-name>
+    <url-pattern>/DisplayServ</url-pattern>
+  </servlet-mapping>
+</web-app>
