@@ -54,7 +54,7 @@ public class TasksServiceImpl implements TasksService{
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         Tasks tasks = session.get(Tasks.class,id);
-        session.delete(id);
+        session.delete(tasks);
         transaction.commit();
         session.close();
         return tasks;
