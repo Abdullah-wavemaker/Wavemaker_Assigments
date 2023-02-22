@@ -54,7 +54,7 @@ public class UsersServiceImpl implements UsersService{
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         Users users = session.get(Users.class,id);
-        session.delete(id);
+        session.delete(users);
         transaction.commit();
         session.close();
         return users;
