@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: rgb(18, 26, 31);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 350px;
+    background-color: rgb(16, 19, 20);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.display {
+    background-color: rgb(182, 182, 182);
+    height: 100px;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    font-size: 30px;
+    position: relative;
+}
+.display-1 {
+    opacity: 0.4;
+    font-size: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+.temp-result {
+    position: absolute;
+    bottom: 0;
+    left: 10;
+    font-size: 20px;
+    opacity: 0.3;
+}
+.all-buttons {
+    color: whitesmoke;
+    display: grid;
+    padding:5px ;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+}
+
+.button {
+    border: solid rgba(92, 92, 92, 0.137);
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin: 5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.btn-orange{
+    background-color: rgb(234, 161, 33);
+}
+.btn-blue1{
+    background-color: rgb(189, 220, 247);
+    color: #031743;
+}
+.btn-blue2{
+    background-color: rgb(20, 50, 76);
+}
+.btn-blue3{
+    background-color: rgb(5, 57, 102);
+}
+.btn-blue4{
+    background: linear-gradient(to bottom,rgb(20, 50, 76), rgb(5, 57, 102));
+}
+.btn-0{
+    width: 90%;
+    grid-column: 1/3;
+}
+.button:hover{
+    transform: scale(1.05);
+}
+.btn-blue4:hover{
+    background: linear-gradient(to top,rgb(20, 50, 76), rgb(5, 57, 102));
+}
