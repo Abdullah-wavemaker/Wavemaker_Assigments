@@ -1,8 +1,0 @@
-com\model\Users.class
-com\model\Tasks.class
-com\controller\UserController.class
-com\controller\TasksController.class
-com\services\UsersServiceImpl.class
-com\services\TasksServiceImpl.class
-com\services\UsersService.class
-com\services\TasksService.class
