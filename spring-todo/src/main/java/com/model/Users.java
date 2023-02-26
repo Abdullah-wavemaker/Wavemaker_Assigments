@@ -1,9 +1,6 @@
 package com.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="users")
@@ -21,6 +18,9 @@ public class Users {
     @Column(name = "age")
     private int age;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    private Tasks tasks;
     public void setAge(int age) {
         this.age = age;
     }
@@ -52,6 +52,15 @@ public class Users {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public Tasks getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(Tasks tasks) {
+        this.tasks = tasks;
+    }
+
     @Override
     public String toString() {
         return super.toString();
