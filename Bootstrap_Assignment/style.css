@@ -4,6 +4,9 @@ body{
 .btn{
     background-color: rgb(153, 211, 96);
 }
+.btn:hover{
+    background-color: rgb(172, 235, 110);
+}
 .header4{
     background-color: rgb(153, 211, 96);
     width: 90%;
@@ -21,4 +24,17 @@ body{
 }
 #logos{
     background-color: rgba(216, 222, 225, 0.372);
+}
+.navbar a{
+    text-decoration: none;
+}
+.navbar a:hover{
+    transform: scale(1.2);
+}
+.line{
+    width: 90%;
+}
+iframe{
+    height: 20vw;
+    width: 35vw;
 }
