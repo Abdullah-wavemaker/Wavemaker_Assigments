@@ -1,0 +1,35 @@
+body {
+    background-color: #f6f8fa;
+}
+td {
+    line-height: 2rem;
+}
+table thead tr th{
+    background-color: #FFB84C !important;
+    color: #ffffff;
+}
+td {
+    line-height: 2rem;
+}
+table thead tr th{
+  background-color: #FFB84C;
+  color: #ffffff;
+}
+
+table{
+    width: 100%;
+}
+.navbar{
+    background-color: #F5EAEA;
+    color: #FBB03B;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.navbar a{
+    color: #FBB03B !important;
+}
+.container{
+    padding-top:10vh ;
+}
