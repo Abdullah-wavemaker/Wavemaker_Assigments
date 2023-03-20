@@ -1,0 +1,15 @@
+html {
+    background: #F2F2F2;
+  }   
+.container{
+    width:70%;
+    align-items: center;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    color: blue;
+}
+#canvas{
+    width: 100%;
+}
